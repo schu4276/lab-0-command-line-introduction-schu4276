@@ -1,10 +1,11 @@
 #!/bin/bash
 #first script of lab 0
-compile_c()
-{
 ##### CONSTANTS	
 NUMBER=$1
 Dir_name=$2
+SCRATCH=$(mktemp --directory)
 ##### MAIN
-echo "Hello World"
-}
+# extracting the contents of the tar archive, and putting them into 
+# the scratch directory that was previously created
+tar -xf NthPrime.tgz -C SCRATCH
+
