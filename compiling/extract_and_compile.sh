@@ -6,7 +6,7 @@ Dir_name=$2
 ##### MAIN
 # extracting the contents of the tar archive, and putting them into 
 # the directory specified by the user
-tar -xf NthPrime.tgz -C $Dir_name
+tar -zxf NthPrime.tgz -C $Dir_name
 # Going into the NthPrimeDirectory that the file was extracted to
 #and compiling the C program that was extracted, generating a executable called NthPrime
 cd || exit
