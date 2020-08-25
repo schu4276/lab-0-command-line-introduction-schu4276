@@ -2,7 +2,7 @@
 # second script of lab 0
 ##### CONSTANTS
 ARCHIVE_NAME=$1
-BASE=$(basename -s .tgz "$ARCHIVENAME")
+BASE=$(basename -s .tgz "$ARCHIVE_NAME")
 #### MAIN
 SCRATCH=$(mktemp -d)
 # extracting the contents of the tar archive, and putting them into
