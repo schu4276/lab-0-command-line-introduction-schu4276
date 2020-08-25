@@ -16,4 +16,4 @@ cd "$SCRATCH" || exit
 find ./ -type f | grep -l "DELETE ME" | xargs echo rm   
 # Creating a new compressed tar archive that contains the files left over in the scratch dir
 cd "$HERE" || exit 
-tar -zcf cleaned_"$ARCHIVE_NAME".tgz "$SCRATCH"
+tar -zcf cleaned_"$ARCHIVE_NAME"  "$SCRATCH"
