@@ -2,10 +2,8 @@
 # second script of lab 0
 ##### CONSTANTS
 ARCHIVE_NAME=$1
-echo $ARCHIVE_NAME
-BASE=$(basename -s .tg "$ARCHIVENAME")
-
-##### MAIN
+BASE=$(basename -s .tgz "$ARCHIVENAME")
+#### MAIN
 SCRATCH=$(mktemp -d)
 # extracting the contents of the tar archive, and putting them into
 # the new scratch dir
@@ -18,7 +16,8 @@ cd "$SCRATCH" || exit
 # the -l flag displays the filenames that contain the delete me phrase 
 grep -Rl "DELETE ME" . | xargs rm   
 # Creating a new compressed tar archive that contains the files left over in the scratch di
-tar -zcf cleaned_"$ARCHIVE_NAME" little_dir
+tar -zcf cleaned_"$ARCHIVE_NAME" "$BASE"
 mv cleaned_"$ARCHIVE_NAME" "$HERE"
 cd "$HERE" || exit 
 #delete the scratch dir
+
